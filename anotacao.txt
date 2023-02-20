@@ -1,0 +1,5 @@
+Ctrl + = aumenta fonte
+Ctrl - = diminue fonte
+
+
+Control + b = minimizar o explorador
