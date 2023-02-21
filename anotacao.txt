@@ -3,3 +3,15 @@ Ctrl - = diminue fonte
 
 
 Control + b = minimizar o explorador
+
+
+#html
+  id "." = usado no java Script
+  class "#" usado no Css
+
+#Css
+-- importancia
+  h2.titulo > h2
+  .teste h2 = h2.titulo
+  .teste h2.titulo > h2.titulo
+
