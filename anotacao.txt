@@ -15,3 +15,7 @@ Control + b = minimizar o explorador
   .teste h2 = h2.titulo
   .teste h2.titulo > h2.titulo
 
+#java Script
+  && = E
+  || = ou
+
