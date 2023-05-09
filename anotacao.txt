@@ -4,6 +4,11 @@ Ctrl - = diminue fonte
 
 Control + b = minimizar o explorador
 
+vsCode 
+  monsta o Testo moficado de outra cor
+  "git.decorations.enabled": true
+
+
 
 #html
   id "." = usado no java Script
