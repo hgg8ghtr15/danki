@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    padding: 0px 15px;
+    background-color: aqua;
+  }
+
+  .w50 {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    vertical-align: text-top;
+    background-color: aqua;
+  }
+
+  .w50 img {
+    max-width: 20%;
+  }
+
+  .w50 .menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  .w50 .menu li a {
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  .banner {
+    width: 100%;
+    text-align: center;
+    background-color: bisque;
+    padding: 10px;
+  }
+
+  .diferenciais {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background-color: azure;
+  }
+
+  .diferenciais .w33 {
+    width: 33.3%;
+    padding: 15px;
+  }
+
+  .diferenciais .w33:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .diferenciais p {
+    text-align: justify;
+  }
+
+  .diferenciais h2 {
+    padding: 5px 0px;
+  }
+
+  .diferenciais img {
+    max-width: 50%;
+  }
+
+  footer {
+    width: 100%;
+    padding: 15px;
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .w50 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: center;
+    background-color: aqua;
+  }
+
+  .w50 img {
+    max-width: 100%;
+  }
+
+  .w50 .menu {
+    display: flex;
+    height: 100%;
+    /* border: 1px solid red; */
+    justify-content: end;
+    list-style: none;
+    padding: 10px 0px;
+  }
+
+  .w50 .menu li a {
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  .banner {
+    width: 100%;
+    text-align: center;
+    background-color: bisque;
+    padding: 10px;
+  }
+
+  .diferenciais {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background-color: azure;
+  }
+
+  .diferenciais .w33 {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .diferenciais .w33:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .diferenciais p {
+    text-align: justify;
+  }
+
+  .diferenciais h2 {
+    padding: 5px 0px;
+  }
+
+  .diferenciais img {
+    max-width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    padding: 15px;
+    text-align: justify;
+  }
+}

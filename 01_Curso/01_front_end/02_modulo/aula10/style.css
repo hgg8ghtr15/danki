@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont
+}
+
+.containner>.d1 .cor {
+  color: blueviolet;
+}
+
+.containner {
+  color: brown;
+}
+
+.d1 {
+  flex: 1;
+  /* width: 100%; */
+  text-align: justify;
+  padding: 1%;
+  color: aqua;
+  /* background-color: rgb(113, 131, 125); */
+}

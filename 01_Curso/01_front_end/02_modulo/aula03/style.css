@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+}
+
+.h2_estilo {
+  color: blue;
+}
+
+#h2_estilo {
+  color: brown;
+}
+
+[name=paragrafo] {
+  color: blueviolet;
+}
