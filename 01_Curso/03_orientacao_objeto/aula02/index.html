@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //forma mais antiga
+    function Pessoa() {
+      this.nome = "Fabio Lucas Marconi"
+      this.idade = 18
+
+      this.cantar = function (musica) {
+        console.log("Bra bra bra", musica)
+      }
+    }
+
+    const pessoa = new Pessoa()
+    pessoa.cantar("Jovem Pan")
+
+
+    function Cachorro(nome, idade) {
+      this.nome = nome
+      this.idade = idade
+
+      this.latir = function () {
+        console.log("Au Au Auuuuuuu")
+      }
+    }
+
+    const dog = new Cachorro("Fantasma", 5)
+    console.log(dog)
+    dog.latir()
+    console.log("------------------")
+
+    //forma mais nova
+
+
+    class Animal {
+      constructor(nome) {
+        this.nome = nome
+      }
+
+      andar() {
+        console.log("Andadndo")
+      }
+    }
+
+    pessoa2 = new Animal("Sansa")
+    console.log(pessoa2.nome)
+    pessoa2.andar()
+
+    class Gato extends Animal {
+      constructor(nome, raca) {
+        super(nome)
+        this.raca = raca
+      }
+    }
+
+    gato = new Gato("Sansa", "Buldogue")
+    gato.andar()
+
+
+  </script>
+
+</body>
+
+</html>

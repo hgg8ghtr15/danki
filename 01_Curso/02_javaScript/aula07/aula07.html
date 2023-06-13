@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    let n = 0
+
+    while (n < 5) {
+      console.log("Teste " + n)
+      n++;
+    }
+    console.log("----------------")
+    for (var i = 0; i < 5; i++) {
+      console.log("Teste " + i)
+    }
+    console.log("----------------")
+
+    n = 0
+    do {
+      console.log("Teste " + n)
+      n++
+    } while (n < 5)
+
+    console.log("----------------")
+    const nome = ["fabio", "lucas", "igor"]
+
+    nome.forEach(function (value, index) {
+      console.log(value, index)
+    })
+
+    console.log("----------------")
+    nome.forEach((nome, index) => {
+      console.log(nome, index)
+    })
+
+  </script>
+
+</body>
+
+</html>

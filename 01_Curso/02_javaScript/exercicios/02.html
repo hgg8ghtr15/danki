@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    const somar = (valor1, valor2) => {
+      return valor1 + valor2
+    }
+    const subtracao = (valor1, valor2) => {
+      return valor1 - valor2
+    }
+    const divisao = (valor1, valor2) => {
+      return valor1 / valor2
+    }
+    const multiplicacao = (valor1, valor2) => {
+      return valor1 * valor2
+    }
+
+    let valor1 = ""
+    let valor2 = ""
+    do {
+      valor1 = parseFloat(prompt("Digite o valor 1"))
+      alert(valor1)
+    } while (isNaN(valor1))
+
+    do {
+      valor2 = parseFloat(prompt("Digite o valor 2"))
+      alert(valor2)
+    } while (isNaN(valor2))
+
+    let operador = ""
+
+    while (operador != "*" && operador != "+" && operador != "/" && operador != "+") {
+      operador = prompt("Digite o operador, '+', '-', '*', '/'")
+    }
+
+    let resultado = 0
+
+    if (operador == "+") {
+      resultado = somar(valor1, valor2)
+    } else if (operador == "-") {
+      resultado = subtracao(valor1, valor2)
+    } else if (operador == "*") {
+      resultado = multiplicacao(valor1, valor2)
+    } else if (operador == '/') {
+      resultado = divisao(valor1, valor2)
+    }
+
+    alert(resultado)
+
+  </script>
+
+</body>
+
+</html>
