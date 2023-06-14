@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="box">Teste</div>
+
+  <div class="teste">Teste Classe 1</div>
+  <div class="teste">Teste Classe 2</div>
+  <div class="teste">Teste Classe 3</div>
+  <div class="teste">Teste Classe 4</div>
+  <div class="teste">Teste Classe 5</div>
+
+  <div class="teste1">Teste Classe 1</div>
+  <div class="teste1">Teste Classe 2</div>
+  <div class="teste1">Teste Classe 3</div>
+  <div class="teste1">Teste Classe 4</div>
+  <div class="teste1">Teste Classe 5</div>
+
+  <script>
+
+    let el = document.getElementById("box")
+    el.style.backgroundColor = "red";
+    el.style.width = "200px"
+    el.style.height = "200px"
+    el.style.margin = "10px"
+    el.style.padding = "10px"
+
+    const el1 = document.getElementsByClassName("teste")
+    for (let elemento1 of el1) {
+      elemento1.style.backgroundColor = "#007790";
+      elemento1.style.width = "200px";
+      elemento1.style.height = "20px";
+      elemento1.style.margin = "10px";
+      elemento1.style.padding = "10px";
+    }
+
+    const el2 = document.querySelectorAll(".teste1")
+    for (let elemento2 of el2) {
+      elemento2.innerHTML = "Novo Testo"
+      elemento2.style.backgroundColor = "#785533";
+      elemento2.style.width = "200px";
+      elemento2.style.height = "20px";
+      elemento2.style.margin = "10px";
+      elemento2.style.padding = "10px";
+    }
+
+  </script>
+
+</body>
+
+</html>
