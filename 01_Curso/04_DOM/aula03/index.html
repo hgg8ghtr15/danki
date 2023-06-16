@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      background-color: red;
+      height: 200px;
+      width: 200px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .anime {
+      transition: 1s;
+      margin-left: 100px;
+    }
+  </style>
+</head>
+
+<div class="box">
+
+</div>
+
+
+<script>
+  const box = document.querySelectorAll(".box")[0]
+  setTimeout(() => {
+    box.classList.add("anime")
+    alert("Funcionando")
+  }, 1000)
+  box.addEventListener("click", () => {
+    box.classList.remove("anime")
+  })
+
+</script>
+
+<body>
+
+</body>
+
+</html>

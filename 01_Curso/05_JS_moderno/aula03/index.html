@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    function teste() {
+      return new Promise((resolve, rejeitar) => {
+        const erro = false;
+        setTimeout(() => {
+
+          console.log("Tempo de espera")
+          if (erro) {
+            rejeitar("Error de execução")
+          } else {
+            resolve("Resolvida")
+          }
+
+        }, 10000)
+      })
+    }
+
+    teste().then((res) => {
+      console.log(res)
+    }).catch((err) => {
+      console.log(err)
+    })
+
+    async function teste2() {
+      await teste().then((res) => {
+        console.log(res)
+      }).catch((err) => {
+        console.log(err)
+      })
+
+      alert("Testandado")
+    }
+
+    console.log(teste2())
+
+  </script>
+
+</body>
+
+</html>
