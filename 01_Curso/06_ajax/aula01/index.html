@@ -10,24 +10,26 @@
 <body>
 
   <script>
-    var request = new XMLHttpRequest();
-    request.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+    setTimeout(() => {
+      var request = new XMLHttpRequest();
+      request.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
 
-    request.onload = function () {
-      if (this.status >= 200 && this.status < 400) {
-        //sucesso 
-        const data = JSON.parse(this.response)
-        console.log(data)
-      } else {
-        //erro
+      request.onload = function () {
+        if (this.status >= 200 && this.status < 400) {
+          //sucesso 
+          const data = JSON.parse(this.response)
+          const { userId, id, title, completed } = data
+          console.log(data)
+          console.log("-------------")
+          console.log(userId, id, title, completed)
+        } else {
+          //erro
+        }
       }
-    }
-
-    request.onerror = function () {
-
-    }
-
-    request.send()
+      request.onerror = function () {
+      }
+      request.send()
+    }, 5000)
 
   </script>
 

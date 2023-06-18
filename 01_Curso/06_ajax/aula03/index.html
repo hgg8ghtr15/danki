@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    fetch("https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US&page=1", {
+      method: "GET",
+    })
+      .then(response => response.json())
+      .then(
+        function (json) {
+          console.log(json);
+        }
+      )
+
+  </script>
+
+</body>
+
+
+</html>
