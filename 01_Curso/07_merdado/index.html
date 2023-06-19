@@ -19,13 +19,15 @@
     <input type="submit" nome="acao" value="Cadastrar">
   </div>
 
+  <div class="limparProdutos">
+    <input type="submit" name="limparProdutos" value="Limpar Lista">
+  </div>
+
   <div class="soma-produto">
-
+    <h1>Sem items para realizar o calculo.</h1>
   </div>
 
-  <div class="lista-produtos">
-
-  </div>
+  <div class="lista-produtos"></div>
 
   <script>
     let items = []
@@ -37,46 +39,68 @@
       }
     }
 
-    function listaDados(listaProdutos) {
+    function adicionarItem(nome, valor) {
+      if (nome.value != "" || valor.value != "") {
+        const item1 = new Item(nome.value, parseFloat(valor.value))
+        items.push(item1)
+        listaDados()
+        imprimirSomaProduto()
+        return `Item Cadastrado com sucesso!`
+      }
+
+      return `Item não pode ser vazio!`
+    }
+
+    function listaDados() {
+      let listaProdutos = document.querySelector(".lista-produtos")
       listaProdutos.innerHTML = ""
       items.map((val) => {
         listaProdutos.innerHTML += `
         <div class="lista-produto-single">
           <h3>${val.nome}</h3>
-          <span>${val.valor}</span>
+          <span>${val.valor.toFixed(2)} R$</span>
         </div>`
       })
     }
 
-    function imprimirSomaProduto(somaProduto) {
+    function imprimirSomaProduto() {
+      let somaProduto = document.querySelector(".soma-produto")
       let valorTotal = 0
       items.map((val) => {
         valorTotal += val.valor
       })
 
-      somaProduto.innerHTML = `<h1>${valorTotal}</h1>`
+      somaProduto.innerHTML = `<h1>${valorTotal.toFixed(2)} R$</h1>`
     }
 
+    let botaoCadastrar = document.querySelector("input[type=submit]")
 
-    document.querySelector("input[type=submit]").addEventListener("click", () => {
-      // console.log("Clicado")
+    botaoCadastrar.addEventListener("click", () => {
       let nome = document.querySelector('input[name=nome_produto]')
       let valor = document.querySelector('input[name=valor_produto]')
-
-      const item1 = new Item(nome.value, parseFloat(valor.value))
-      items.push(item1)
-
-      let listaProdutos = document.querySelector(".lista-produtos")
-      listaDados(listaProdutos)
-
-      let somaProduto = document.querySelector(".soma-produto")
-      imprimirSomaProduto(somaProduto)
-
+      const mesnsagem = adicionarItem(nome, valor)
+      alert(mesnsagem)
+      nome.value = ""
+      valor.value = ""
     })
 
+    let botaolimpar = document.querySelector('input[name=limparProdutos]')
+    botaolimpar.addEventListener("click", (event) => {
+      let nome = document.querySelector('input[name=nome_produto]')
+      let valor = document.querySelector('input[name=valor_produto]')
+      nome.value = ""
+      valor.value = ""
 
+      let somaProduto = document.querySelector(".soma-produto")
+      somaProduto.innerHTML = `<h1>Sem items para realizar o calculo.</h1>`
 
+      let listaProdutos = document.querySelector(".lista-produtos")
+      listaProdutos.innerHTML = ""
+
+      alert("Lista Limpa com Sucesso!")
+    })
   </script>
+
 </body>
 
 </html>

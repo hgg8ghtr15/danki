@@ -17,6 +17,7 @@ header {
   /* flex-direction: column; */
 }
 
+
 .lista-cadastro input[type=text],
 input[type=number] {
   flex: 1;
@@ -28,6 +29,21 @@ input[type=number] {
 .lista-cadastro input[type=submit] {
   flex: 1;
   /* margin: 0 20px; */
+}
+
+.limparProdutos {
+  display: flex;
+  flex-direction: row;
+  margin: 0 20px;
+  padding: 20px 0px;
+  border-radius: 15px;
+}
+
+.limparProdutos input[name=limparProdutos] {
+  flex: 1;
+  margin: 0 20px;
+  height: 30px;
+  /* padding-left: 25px; */
 }
 
 .soma-produto {
