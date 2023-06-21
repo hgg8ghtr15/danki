@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: brown; */
+}
+
+.div1 {
+  display: flex;
+  background-color: #603F4C;
+  padding: 20px;
+}
+
+.div1 form input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.div1 button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #A3896E;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.div1 button:hover {
+  background-color: #C9AFAF;
+}
+
+.lista {
+  background-color: #C9AFAF;
+}
+
+.div2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #C9AFAF;
+  /* margin: 10px; */
+  padding: 0 20px;
+}
+
+.div2 :hover {
+  background-color: #603F4C;
+}
+
+.div2 p {
+  width: 50%;
+}
+
+.div2 a {
+  cursor: pointer;
+  width: 50%;
+  text-decoration: none;
+}
+
+.div2 a:hover {
+  text-decoration: none;
+}
+
+/* .div2 ul {
+  list-style-type: none;
+  padding: 0;
+} */
+
+/* .div2 li {
+  display: flex;
+  background-color: #8F715B;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+} */
+
+/* .div2 li:last-child {
+  margin-bottom: 0;
+} */
+
+/* .div2 li:hover {
+  background-color: #603F4C;
+} */
+
+/* .div2 li a {
+  color: white;
+  text-decoration: none;
+  align-items: end;
+}
