@@ -1,7 +1,0 @@
-#inicia projto
-  npm init -y
-
-#Instal desenvolvedor
-  npm install --save-dev express
-# npm install -g express
-

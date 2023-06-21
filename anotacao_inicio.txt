@@ -1,0 +1,16 @@
+#inicia projto
+  npm init -y
+
+#Instal desenvolvedor
+  npm install --save-dev express
+  npm install -g express
+
+#Instal via yarn
+  yarn init -y
+  yarn install
+  yarn add express
+  yarn add ejs
+  yarn add body-parser
+
+
+
