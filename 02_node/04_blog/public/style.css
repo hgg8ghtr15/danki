@@ -1,0 +1,232 @@
+:root {
+  --corFundo: #7D55C7;
+  --corLetras: #ffffff;
+  --corBotao: #9F73E6;
+  /* --corDestaque: rgba(159, 115, 230, 0.7); */
+  --corDestaque: rgba(0, 0, 0, 0.6)
+}
+
+/* :root {*/
+/* --corFundo: #7573e6; */
+/* --corBotao: #5586c7; */
+/* --corLetras: #ffffff; */
+/* --corDestaque: rgba(159, 115, 230, 0.7) */
+/* --corDestaque: rgba(0, 0, 0, 0.6) */
+/* }  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: var(--corFundo);
+  color: var(--corLetras);
+
+}
+
+.center {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: auto; */
+}
+
+.menu {
+  flex: 1;
+  /* border: 1px solid #adbe17; */
+  align-items: center;
+  font-size: 35px;
+}
+
+.menu svg {
+  height: 30px;
+  width: 48px;
+  padding: 0px 6px;
+  fill: var(--corLetras);
+}
+
+.logo {
+  flex: 3;
+  align-items: center;
+  text-align: center;
+}
+
+.form-busca {
+  flex: 1;
+  padding: 10px 10px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: var(--corBotao);
+}
+
+.form-busca form {
+  display: flex;
+}
+
+.form-busca form svg {
+  width: 34px;
+  height: 28px;
+  padding: 0px 6px;
+  fill: var(--corLetras);
+}
+
+.form-busca form input {
+  border-radius: 5px;
+  padding: 0 6px;
+  background-color: transparent;
+  color: var(--corLetras);
+  border: none;
+  /* font-size: 20px; */
+}
+
+.form-busca form input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.form-busca form input::placeholder {
+  color: var(--corLetras)
+}
+
+.noticia-destaque {
+  padding: 20px 0px;
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+}
+
+.noticia-destaque .center .img-destaque {
+  position: relative;
+  width: 80vw;
+  border-radius: 5px;
+}
+
+.noticia-destaque .center .img-destaque .titulo-destaque-descricao {
+  position: absolute;
+  width: 100%;
+  padding: 15px;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 5px;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  color: var(--corLetras);
+  background-color: var(--corDestaque);
+}
+
+.noticia-destaque .center .img-destaque .titulo-destaque-descricao p {
+  text-align: justify;
+
+}
+
+.noticia-destaque .center .img-destaque img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+.noticias-ultimas {
+  background: var(--corFundo);
+  padding: 0px 20px;
+}
+
+.center-coluna {
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px 0px; */
+}
+
+.noticias-ultimas .center-coluna .center-coluna-h2 {
+  text-align: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: var(--corLetras);
+}
+
+.noticias-ultimas .center-coluna .noticia {
+  flex: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.noticias-ultimas .center-coluna .noticia .ultimas {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  /* padding: 0px 10px; */
+  flex-wrap: wrap;
+  /* width: 100%; */
+}
+
+.noticias-ultimas .center-coluna .noticia .ultimas .materia {
+  flex: 45%;
+  background: var(--corLetras);
+  border-radius: 10px;
+  margin: 0px 25px 25px 0px;
+}
+
+.noticias-ultimas .center-coluna .noticia .ultimas img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.noticias-ultimas .center-coluna .noticia .ultimas h3 {
+  padding: 20px 20px 0 20px;
+}
+
+.noticias-ultimas .center-coluna .noticia .ultimas p {
+  padding: 20px;
+  text-align: justify;
+}
+
+.mais-lidas {
+  flex: 1;
+  background-color: var(--corLetras);
+  border-radius: 10px;
+  margin: 0px 0px 25px 0px;
+}
+
+.mais-lidas .titulo {
+  border-radius: 5px;
+  background: var(--corBotao);
+  color: var(--corLetras);
+  padding: 20px 0px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.mais-lidas .material {
+  display: flex;
+  padding: 20px 10px;
+}
+
+
+.resumo1 {
+  flex: 40%;
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+}
+
+.resumo1 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.resumo2 {
+  flex: 60%;
+  max-height: 80px;
+  padding: 10px 10px;
+  text-align: justify;
+  /* width: 100%; */
+  overflow: hidden;
+}
+
+.resumo2 h4 {
+  padding: 6px 0px;
+  text-align: justify;
+}
