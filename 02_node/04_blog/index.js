@@ -29,6 +29,10 @@ app.get("/", (req, res) => {
   }
 
 })
+app.get("/noticia", (req, res) => {
+  console.log(req.query) //acessa '/?busca=teste'
+  return res.render('noticia')
+})
 
 app.get('/:slug', (req, res) => {
   return res.send(req.params.slug) //acessa via http://127.0.0.1:5000/sobre noticia
