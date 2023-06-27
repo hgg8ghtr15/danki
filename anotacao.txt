@@ -24,3 +24,7 @@ vsCode
   && = E
   || = ou
 
+
+fabiolukascj
+3WQg8vbbHOjt61VX
+168.196.66.73/32
