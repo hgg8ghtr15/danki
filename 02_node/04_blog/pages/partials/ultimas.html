@@ -1,56 +1,27 @@
 <div class="ultimas">
+  <% for(let i=0; i < noticias.length; i++) { %>
 
-  <div class="materia">
-    <img class="imgem" src="/public/image/imagem.jpg" alt="">
-    <div class="ler-noticia">
-      <h4>Categocia A</h4>
-      <a href="/noticia">Ler</a>
-    </div>
-    <h3>Notícia A</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum.</p>
-  </div>
 
-  <div class="materia">
-    <img class="imgem" src="/public/image/imagem.jpg" alt="">
-    <div class="ler-noticia">
-      <h4>Categocia A</h4>
-      <a href="/noticia">Ler</a>
-    </div>
-    <h3>Noticia B</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum.</p>
-  </div>
+    <div class="materia">
+      <img class="imgem" src="<%= noticias[i].imagem %>" alt="">
 
-  <div class="materia">
-    <img class="imgem" src="/public/image/imagem.jpg" alt="">
-    <div class="ler-noticia">
-      <h4>Categocia A</h4>
-      <a href="/noticia">Ler</a>
+      <div class="ler-noticia">
+        <h4>
+          <%= noticias[i].categoria %>
+        </h4>
+        <a href="/noticia/<%= noticias[i]._id %>">Ler</a>
+      </div>
+      <h3>
+        <%= noticias[i].titulo %>
+      </h3>
+      <h5>
+        Date Publicação <%= noticias[i].datapublicacao.getDate() %>/<%= noticias[i].datapublicacao.getMonth() + 1 %>/<%=
+              noticias[i].datapublicacao.getFullYear() %>
+      </h5>
+      <p>
+        <%= noticias[i].conteudo %>
+      </p>
     </div>
-    <h3>Noticia C</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum.</p>
-  </div><!-- materia -->
+    <% } %>
+
 </div><!-- ultimas -->

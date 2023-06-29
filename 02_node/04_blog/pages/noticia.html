@@ -1,12 +1,11 @@
 <%- include('partials/header.html')%>
-  <!-- <%- include('partials/noticia-destaque.html')%> -->
 
 
   <section class="noticias-ultimas">
     <div class="center-coluna">
       <div class="noticia">
 
-        <%- include('partials/noticia.html')%>
+        <%- include('partials/noticia.html',{ noticia: noticia } )%>
           <%- include('partials/mais-lidas.html')%>
 
       </div><!-- noticia -->

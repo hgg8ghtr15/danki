@@ -27,24 +27,25 @@
       </a>
 
     </div>
-    <h3 class="nome-materia">Noticia A</h3>
+    <img src="<%= noticia.imagem %>" alt="">
+    <h3 class="nome-materia">
+      <%= noticia.titulo %>
+    </h3>
     <div class="autor">
       <div>
-        <img src="/public/image/imagem.jpg" alt="">
+        <img src="<%= noticia.imagem %>" alt="">
         <h4>Fabio lucar marconi</h4>
       </div>
-      <h4 class="titulo-publicacao">Naturaza</h4>
+      <h4 class="titulo-publicacao">
+        <%= noticia.categoria %>
+      </h4>
     </div>
-    <p class="data-materia">Texto publicado em: 10/10/2023</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis qui laborum iste
-      deserunt.
-      Corporis
-      pariatur nisi suscipit fugiat tempora cumque nesciunt? Repellendus, fugit sint molestias itaque ipsa
-      quod
-      rerum.</p>
+    <p class="data-materia">
+      Date publicação <%= noticia.datapublicacao.getDate() %>/<%= noticia.datapublicacao.getMonth() + 1 %>/<%=
+            noticia.datapublicacao.getFullYear() %>
+    </p>
+    <p>
+      <%= noticia.conteudo %>
+    </p>
   </div>
 </div><!-- ultimas -->

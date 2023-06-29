@@ -30,17 +30,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   console.log(req.query) //acessa '/?busca=teste'
 
-  Noticias.find({})
-    .then((noticias) => {
-      console.log("teste")
-      console.log(noticias)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-
   if (req.query.busca == null) {
-    return res.render('index')
+    Noticias.find().sort({ "_id": -1 })
+      .then((noticias) => {
+        return res.render('index', { noticias: noticias })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   } else {
     //acessa via http://127.0.0.1:5000/?busca=teste
     return res.send(`Rotorno a: ${req.query.busca}`)
@@ -48,8 +45,28 @@ app.get("/", (req, res) => {
 })
 
 app.get("/noticia", (req, res) => {
-  console.log(req.query) //acessa '/?busca=teste'
+  // console.log(req.query) //acessa '/?busca=teste'
+  // return res.send(req.params.id) //acessa via http://127.0.0.1:5000/sobre noticia
   return res.render('noticia')
+})
+
+app.get("/noticia/:id", (req, res) => {
+
+  Noticias.findById(req.params.id)
+    .then((noticia) => {
+      if (!noticia) {
+        console.log("Noticia não encontrada")
+        return res.send("Noticia não encontrada")
+      } else {
+        console.log(noticia)
+        return res.render("noticia", { noticia: noticia })
+      }
+    })
+    .catch((err) => {
+      console.log("Teste")
+      return res.redirect("/")
+    })
+  // console.log(req.query) //acessa '/?busca=teste'
 })
 
 app.get('/:slug', (req, res) => {

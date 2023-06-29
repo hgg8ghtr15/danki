@@ -300,8 +300,16 @@ h4 {
 
 
 .noticias-ultimas .center-coluna .noticia .ultimas p {
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   text-align: justify;
+}
+
+.ultimas .materia h5 {
+  /* width: 100%; */
+  padding: 10px 20px 10px 20px;
+  text-align: right;
+  /* padding: 10px 20px 10px 20px; */
+  /* background-color: #7D55C7; */
 }
 
 .mais-lidas {
