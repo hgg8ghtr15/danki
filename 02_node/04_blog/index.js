@@ -58,7 +58,7 @@ app.get("/noticia/:id", (req, res) => {
         console.log("Noticia não encontrada")
         return res.send("Noticia não encontrada")
       } else {
-        console.log(noticia)
+        // console.log(noticia)
         return res.render("noticia", { noticia: noticia })
       }
     })
