@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const multer = require('multer');
+
 const mongoose = require('mongoose');
 
 const Noticias = require('./Noticias.js')
@@ -26,6 +28,24 @@ app.use(express.json())
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+let nomeImagem = ""
+
+// middle
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/image/');
+  },
+  filename: function (req, file, cb) {
+    const originalName = file.originalname;
+    const extension = originalName.split('.').pop();
+    const uniqueSuffix = Date.now();
+    const newName = uniqueSuffix + '.' + extension;
+    nomeImagem = newName
+    cb(null, newName);
+  }
+})
+const upload = multer({ storage: storage });
 
 app.get("/", (req, res) => {
   console.log(req.query) //acessa '/?busca=teste'
@@ -67,6 +87,26 @@ app.get("/noticia/:id", (req, res) => {
       return res.redirect("/")
     })
   // console.log(req.query) //acessa '/?busca=teste'
+})
+
+app.get("/cadastro-Noticia", (req, res) => {
+  console.log("cadastro-Noticia")
+  return res.render("cadastroNoticia")
+})
+
+app.post("/cadastro-Noticia", upload.single('imagem'), (req, res) => {
+  console.log(`passou por aqui`)
+  console.log(`${nomeImagem}`)
+  req.body['imagem'] = `public/image/${nomeImagem}`
+  req.body['datapublicacao'] = new Date(req.body.data)
+  const noticia = new Noticias(req.body)
+  try {
+    console.log(noticia)
+    noticia.save()
+  } catch (error) {
+    console.log(error)
+  }
+  return res.render("cadastroNoticia")
 })
 
 app.get('/:slug', (req, res) => {

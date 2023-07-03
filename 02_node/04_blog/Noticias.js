@@ -7,8 +7,8 @@ var postschema = new Schema({
   imagem: String,
   categoria: String,
   conteudo: String,
-  autor:String,
-  datapublicacao: { type: Date, default: Date.now },
+  autor: String,
+  datapublicacao: { type: Date },
 
 }, { collection: 'noticias' })
 

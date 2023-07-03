@@ -117,6 +117,8 @@ header {
   color: var(--corLetras)
 }
 
+/* NOTICIA DESTAQUE */
+
 .noticia-destaque {
 
   width: 100%;
@@ -156,6 +158,7 @@ header {
   border-radius: 5px;
 }
 
+/* ULTIMA NOTICIA */
 
 .noticias-ultimas {
   display: flex;
@@ -391,6 +394,8 @@ h4 {
   text-align: justify;
 }
 
+/* Footer */
+
 .footer {
   flex: 1;
   /* padding: 20px 0px; */
@@ -405,4 +410,67 @@ h4 {
   flex: 1;
   width: 100%;
   display: flex;
+}
+
+/* CADASTRO DE NOTICIA */
+
+.noticia .cadastro {
+  background-color: var(--corLetras);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  color: var(--corLetras);
+  border-radius: 20px;
+}
+
+.noticia .cadastro input,
+select,
+textarea {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  color: var(--corLetras);
+  background: var(--corFundo);
+}
+
+
+.noticia .cadastro select option {
+  background: var(--corFundo);
+  color: var(--corLetras);
+  padding: 5px;
+  margin: 10px;
+}
+
+.noticia .cadastro input[type=submit] {
+  background: var(--corFundo);
+  color: var(--corLetras);
+}
+
+.noticia .cadastro input[type=submit]:hover {
+  background: var(--corBotao);
+  color: var(--corLetras);
+  cursor: pointer;
+}
+
+input {
+  border-radius: 5px;
+  padding: 0 6px;
+  background-color: transparent;
+  color: var(--corLetras);
+  border: none;
+  /* font-size: 20px; */
+}
+
+input,
+textarea,
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+input::placeholder {
+  color: var(--corLetras)
 }
