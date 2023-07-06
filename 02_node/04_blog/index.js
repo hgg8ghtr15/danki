@@ -9,7 +9,7 @@ const Noticias = require('./Noticias.js')
 
 const app = express();
 const ip = '127.0.0.1'
-const port = 5000
+const port = process.env.PORT || 5000;
 
 // const url = `mongodb+srv://fabiolukascj:3WQg8vbbHOjt61VX@cluster0.j1tjy5t.mongodb.net/?retryWrites=true&w=majority`
 const url = `mongodb+srv://fabiolukascj:3WQg8vbbHOjt61VX@cluster0.j1tjy5t.mongodb.net/database?retryWrites=true&w=majority`

@@ -1,0 +1,18 @@
+<section class="noticia-destaque">
+  <div class="center">
+
+    <div class="img-destaque">
+      <div class="titulo-destaque-descricao">
+        <h2>
+          <%= noticias[0].titulo%>
+        </h2>
+        <p>
+          <%= noticias[0].conteudo%>
+        </p>
+      </div>
+      <a href="/noticia/<%= noticias[0]._id %>">
+        <img src="<%= noticias[0].imagem%>" alt="">
+      </a>
+    </div>
+  </div>
+</section>
